@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aluguel de Carros</title>
+
+  <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+  <footer>
+    <div class="footer1">
+      <img src="../Marca/Marca.svg" alt="">
+      <ul class="lista font-1-m32 cor-a2">
+        <li><a href="./">Carros</a></li>
+        <li><a href="./">Cadastrar</a></li>
+        <li><a href="./">Contato</a></li>
+      </ul>
+    </div>
+
+    <!-- Sub-footer -->
+    <div style="background-color: var(--cor-a);">
+      <div class="sub-footer">
+        <label for="local"></label>
+        <input class="item1 font-1-sb18" list="locais" name="local" id="local" placeholder="Digite o local de retirada">
+
+        <!-- Cidades e estados que disponíveis -->
+        <datalist id="locais">
+          <option value="Floriano - PI">
+          <option value="São Paulo - SP">
+          <option value="Rio de Janeiro - RJ">
+          <option value="Teresina - PI">
+          <option value="Fortaleza - CE">
+          <option value="Recife - PE">
+        </datalist>
+
+        <input class="item2 font-1-sb18" type="date">
+        <input class="item2 font-1-sb18" type="time">
+
+        <button class="botao1 font-2-b18" type="button" id="botao-buscar">Buscar</button>
+
+        <!-- Botão do Menu e Menu dropdown -->
+        <div class="menu-wrapper">
+          <!-- Botão Menu -->
+          <div class="menu-hamburguer" id="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <!-- Menu dropdown -->
+          <ul id="menu-opcoes" class="menu-escondido font-1-m18">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Frota</a></li>
+            <li><a href="#">Nova Reserva</a></li>
+            <li><a href="#">Minhas Reservas</a></li>
+            <li><a href="#">Atualizar Dados</a></li>
+            <li><a href="#">Carros Disponíveis</a></li>
+            <li><a href="#">Perguntas Frequentes</a></li>
+            <li><a href="#">Sair</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <section class="container">
+    <div class="conteudo-banner">
+      <p class="font-2-i96">Alugue fácil, viaje sem limites<span style="color: var(--cor-l2);">!</span></p>
+      <img src="../imagens/intro.jpg" alt="">
+    </div>
+  </section>
+
+
+  <script src="../JavaScript/Funções Home/home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+/* Utilidades */
+@import "./utilidades/cores.css";
+@import "./utilidades/tipografia.css";
+
+/* Home */
+@import "./Home/footer.css";
+@import "./Home/global.css";
+@import "./Home/section.css";

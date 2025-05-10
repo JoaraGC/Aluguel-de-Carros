@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+footer img {
+  padding-left: 100px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.footer1 {
+  display: flex;
+  gap: 600px;
+  background-color: var(--cor-a2);
+  height: 120px;
+}
+
+.lista {
+  display: flex;
+  gap: 80px;
+  padding-top: 12px;
+}
+
+.footer li {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: var(--cor-4);
+  text-align: center;
+}
+
+.sub-footer {
+  background-color: var(--cor-a1);
+  width: 1360px;
+  height: 120px;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.item1 {
+  width: 488px;
+  height: 65px;
+  margin-top: 27.5px;
+  margin-left: 70px;
+  color: var(--cor-c6);
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+
+.item2 {
+  width: 186px;
+  height: 65px;
+  margin-top: 27.5px;
+  margin-left: 36px;
+  color: var(--cor-c6);
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+
+.menu-wrapper {
+  position: relative;
+  display: block;
+}
+
+.menu-hamburguer {
+  width: 80px;
+  height: 35px;
+  margin-left: 56px;
+  margin-top: 35.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.menu-hamburguer span {
+  height: 7px;
+  background-color: var(--cor-c7);
+  border-radius: 5px;
+}
+
+.menu-escondido li {
+  list-style: none;
+}
+
+.menu-escondido {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  width: 200px;
+  display: none;
+  background-color: var(--cor-c2);
+  padding: 0;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.menu-escondido a {
+  display: block;
+  padding: 10px 15px;
+  color: var(--cor-a2);
+  text-decoration: none;
+  box-shadow: 0 1px 2px var(--cor-c3);
+  border-radius: 4px;
+}
+
+.menu-escondido li:last-child a {
+  border-bottom: none;
+}
+
+.menu-escondido a:hover {
+  background-color: #f2f2f2;
+}

@@ -1,0 +1,18 @@
+section {
+  background-color: var(--cor-a);
+}
+
+section img {
+  max-width: 100%;
+}
+
+.conteudo-banner {
+  display: flex;
+  color: var(--cor-4);
+}
+
+.conteudo-banner img {
+  max-width: 600px;
+  max-height: 400px;
+  margin-top: 80px;
+}
