@@ -15,6 +15,7 @@ body {
   margin-top: 27.5px;
   margin-left: 36px;
   border-radius: 5px;
+  box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   border: none;
   outline: none;
@@ -23,4 +24,22 @@ body {
 .botao1:hover {
   background: linear-gradient(to bottom, #e25500, #e6702a);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.botao2 {
+  width: 225px;
+  height: 70px;
+  color: var(--cor-c8);
+  border-radius: 4px;
+  border: 1px solid #ff6500;
+  background-color: white;
+  margin-top: 60px;
+  display: block;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.botao2:hover {
+  background-color: #e65100;
+  color: white;
 }

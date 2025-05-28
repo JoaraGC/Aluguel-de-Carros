@@ -10,8 +10,8 @@
 </head>
 
 <body>
-  <footer>
-    <div class="footer1">
+  <header>
+    <div class="header1">
       <img src="../Marca/Marca.svg" alt="">
       <ul class="lista font-1-m32 cor-a2">
         <li><a href="./">Carros</a></li>
@@ -20,11 +20,12 @@
       </ul>
     </div>
 
-    <!-- Sub-footer -->
+    <!-- Sub-header -->
     <div style="background-color: var(--cor-a);">
-      <div class="sub-footer">
-        <label for="local"></label>
-        <input class="item1 font-1-sb18" list="locais" name="local" id="local" placeholder="Digite o local de retirada">
+      <div class="sub-header">
+        <label for="">
+          <input class="item1 font-1-sb18" list="locais" name="local" id="local" placeholder="Digite o local de retirada">
+        </label>
 
         <!-- Cidades e estados que disponíveis -->
         <datalist id="locais">
@@ -36,8 +37,12 @@
           <option value="Recife - PE">
         </datalist>
 
-        <input class="item2 font-1-sb18" type="date">
-        <input class="item2 font-1-sb18" type="time">
+        <label for="">
+          <input class="item2 font-1-sb18" type="date">
+        </label>
+        <label for="">
+          <input class="item2 font-1-sb18" type="time">
+        </label>
 
         <button class="botao1 font-2-b18" type="button" id="botao-buscar">Buscar</button>
 
@@ -64,16 +69,166 @@
         </div>
       </div>
     </div>
-  </footer>
+  </header>
 
-  <section class="container">
+  <section class="container banner">
     <div class="conteudo-banner">
       <p class="font-2-i96">Alugue fácil, viaje sem limites<span style="color: var(--cor-l2);">!</span></p>
       <img src="../imagens/intro.jpg" alt="">
     </div>
   </section>
 
+  <!-- Destaques da Frota -->
 
+  <section class="frota-destaque container">
+    <p class="font-1-b32 cor-l1">Encontre o Carro Perfeito para Sua Viajem</p>
+    <p class="font-1-m24 cor-c5">Explore nossa frota e encontre o carro perfeito para sua viagem.</p>
+
+    <div class="carrossel">
+      <button class="btn-anterior"><svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21 3.9375C11.5762 3.9375 3.9375 11.5762 3.9375 21C3.9375 30.4237 11.5762 38.0625 21 38.0625C30.4237 38.0625 38.0625 30.4237 38.0625 21C38.0625 11.5762 30.4237 3.9375 21 3.9375ZM13.51 20.0725C13.2642 20.3186 13.1262 20.6522 13.1262 21C13.1262 21.3478 13.2642 21.6814 13.51 21.9275L18.76 27.1775C18.8802 27.3065 19.0251 27.4099 19.1861 27.4816C19.3471 27.5534 19.5209 27.5919 19.6971 27.595C19.8733 27.5981 20.0484 27.5657 20.2118 27.4997C20.3752 27.4337 20.5237 27.3354 20.6483 27.2108C20.7729 27.0862 20.8712 26.9377 20.9372 26.7743C21.0032 26.6109 21.0356 26.4358 21.0325 26.2596C21.0294 26.0834 20.9909 25.9096 20.9191 25.7486C20.8474 25.5876 20.744 25.4427 20.615 25.3225L17.605 22.3125H27.5625C27.9106 22.3125 28.2444 22.1742 28.4906 21.9281C28.7367 21.6819 28.875 21.3481 28.875 21C28.875 20.6519 28.7367 20.3181 28.4906 20.0719C28.2444 19.8258 27.9106 19.6875 27.5625 19.6875H17.605L20.615 16.6775C20.8468 16.4287 20.9731 16.0996 20.9671 15.7596C20.9611 15.4196 20.8233 15.0951 20.5828 14.8547C20.3424 14.6142 20.0179 14.4764 19.6779 14.4704C19.3379 14.4644 19.0088 14.5907 18.76 14.8225L13.51 20.0725Z" fill="#0B192C" />
+        </svg>
+      </button>
+
+      <div class="carro-atual">
+        <img id="imagem-carro" src="" alt="Carro">
+        <h3 class="font-1-m24" id="nome-carro"></h3>
+        <p class="font-1-m24 cor-c7" id="descricao-carro"></p>
+      </div>
+
+      <button class="btn-proximo">
+        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21 3.9375C11.5762 3.9375 3.9375 11.5762 3.9375 21C3.9375 30.4237 11.5762 38.0625 21 38.0625C30.4237 38.0625 38.0625 30.4237 38.0625 21C38.0625 11.5762 30.4237 3.9375 21 3.9375ZM28.49 21.9275C28.7358 21.6814 28.8738 21.3478 28.8738 21C28.8738 20.6522 28.7358 20.3186 28.49 20.0725L23.24 14.8225C23.1198 14.6935 22.9749 14.5901 22.8139 14.5184C22.6529 14.4466 22.4791 14.4081 22.3029 14.405C22.1267 14.4019 21.9516 14.4343 21.7882 14.5003C21.6248 14.5663 21.4763 14.6646 21.3517 14.7892C21.2271 14.9138 21.1288 15.0623 21.0628 15.2257C20.9968 15.3891 20.9644 15.5642 20.9675 15.7404C20.9706 15.9166 21.0091 16.0904 21.0809 16.2514C21.1526 16.4124 21.256 16.5573 21.385 16.6775L24.395 19.6875H14.4375C14.0894 19.6875 13.7556 19.8258 13.5094 20.0719C13.2633 20.3181 13.125 20.6519 13.125 21C13.125 21.3481 13.2633 21.6819 13.5094 21.9281C13.7556 22.1742 14.0894 22.3125 14.4375 22.3125H24.395L21.385 25.3225C21.256 25.4427 21.1526 25.5876 21.0809 25.7486C21.0091 25.9096 20.9706 26.0834 20.9675 26.2596C20.9644 26.4358 20.9968 26.6109 21.0628 26.7743C21.1288 26.9377 21.2271 27.0862 21.3517 27.2108C21.4763 27.3354 21.6248 27.4337 21.7882 27.4997C21.9516 27.5657 22.1267 27.5981 22.3029 27.595C22.4791 27.5919 22.6529 27.5534 22.8139 27.4816C22.9749 27.4099 23.1198 27.3065 23.24 27.1775L28.49 21.9275Z" fill="#0B192C" />
+        </svg>
+      </button>
+    </div>
+
+    <button class="btn-ver-frota botao2 font-2-b18">CONFERIR FROTA</button>
+
+  </section>
+
+  <!-- Vantagens -->
+  <section class="vantagens container">
+    <p class="font-1-b32 cor-4">Vantagens de Alugar Conosco</p>
+
+    <div class="ofertas">
+      <div class="sub-titulo">
+        <img src="../icons/Cifrao.png" alt="">
+        <p class="font-1-sb30 cor-4">Melhores Preços</p>
+        <p class="font-1-r24 cor-c3">Alugue com preços acessíveis e planos flexíveis que cabem no seu bolso.</p>
+      </div>
+      <div class="sub-titulo">
+        <img src="../icons/Telefone.png" alt="">
+        <p class="font-1-sb30 cor-4">Atendimento Rápido</p>
+        <p class="font-1-r24 cor-c3">Suporte 24/7 para garantir sua tranquilidade na estrada.</p>
+      </div>
+      <div class="sub-titulo">
+        <img src="../icons/Cartao.png" alt="">
+        <p class="font-1-sb30 cor-4">Pagamentos Flexíveis</p>
+        <p class="font-1-r24 cor-c3">Pix, cartão de crédito/débito e até parcelamento.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculadora -->
+
+  <section class="calculadora container">
+    <p class="font-1-b32 cor-l1">Simule o Valor do seu Aluguel</p>
+
+    <form class="linha">
+      <div class="campo">
+        <label class="font-1-sb24 cor-c8" for="modeloCarro">Categoria de Carro</label>
+        <input type="text" id="modeloCarro" name="modeloCarro" list="categoria" required>
+
+        <p id="preco-carro" class="preco-carro cor-c8"></p>
+
+        <datalist id="categoria">
+          <option value="Carros Populares">
+          <option value="SUV">
+          <option value="Sedan">
+          <option value="Carros Elétricos">
+          <option value="Carros Executivos">
+          <option value="Pick-ups">
+        </datalist>
+      </div>
+
+      <div class="campo">
+        <label class="font-1-sb24 cor-c8" for="localRetirada">Local de Retirada</label>
+        <input type="text" id="localRetirada" name="localRetirada" list="locais" required>
+      </div>
+
+      <div class="campo">
+        <label class="font-1-sb24 cor-c8" for="localDevolucao">Local de Devolução</label>
+        <input type="text" id="localDevolucao" name="localDevolucao" list="locais" required>
+      </div>
+
+      <div class="extras">
+        <p class="font-1-sb24 cor-c8">Extras</p>
+
+        <input class="checkbox" type="checkbox" id="gps" name="extras" value="gps">
+        <label for="gps">GPS R$20</label><br>
+
+        <input type="checkbox" id="cadeira" name="extras" value="cadeira">
+        <label for="cadeira">Cadeira para criança R$30</label><br>
+
+        <input type="checkbox" id="wifi" name="extras" value="wifi">
+        <label for="wifi">Wi-fi no carro R$10</label><br>
+
+        <input type="checkbox" id="assistencia" name="extras" value="assistencia">
+        <label for="assistencia">Assistência 24h R$50</label><br>
+      </div>
+
+      <div class="linha-final">
+        <div class="campo">
+          <label class="font-1-sb24 cor-c8" for="qtdDias">Qtd. dias</label>
+          <input type="number" id="qtdDias" name="qtdDias" min="1" value="1" required>
+        </div>
+
+        <div id="resultado" class="campo hidden">
+          <label class="font-1-sb24 cor-c8" for="total">Total</label>
+          <input type="text" id="total" name="total" readonly>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-simular botao1">SIMULAR</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="container">
+    <div class="line">
+      <div>
+        <img src="../Marca/Marca.svg" alt="">
+      </div>
+      <div>
+        <p class="font-1-m28 cor-4">Contato</p>
+        <a href="+5589988224217">
+          <p class="font-1-m24 cor-c5">+89 98822-4217</p>
+        </a>
+        <a href="mailto:joarajgc@gmail.com">
+          <p class="font-1-m24 cor-c5">joarajgc2@gmail.com</p>
+        </a>
+        <p class="font-1-m24 cor-c5">Rua Logo Ali, 2001 - Perto</p>
+        <p class="font-1-m24 cor-c5">Floriano - PI</p>
+      </div>
+      <div>
+        <p class="font-1-m28 cor-4">Informações</p>
+        <a href="">
+          <p class="font-1-m24 cor-c5">Carros</p>
+        </a>
+        <a href="">
+          <p class="font-1-m24 cor-c5">Login</p>
+        </a>
+        <a href="">
+          <p class="font-1-m24 cor-c5">Contato</p>
+        </a>
+      </div>
+    </div>
+    <div class="especial">
+      <p class="font-1-m24 cor-c5">Créditos de imagens: freepik | unsplash | heroicons</p>
+      <p class="font-1-m24 cor-c5">VeloCar © Alguns Direitos Reservados</p>
+    </div>
+  </footer>
   <script src="../JavaScript/Funções Home/home.js"></script>
 </body>
 

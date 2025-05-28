@@ -6,24 +6,24 @@
   font: 600 1.125rem/0.75 "Montserrat", sans-serif;
 }
 
-.font-1-b {
-  font: 700 2.25rem/1.5 "Montserrat", sans-serif;
+.font-1-b32 {
+  font: 700 2rem/2 "Montserrat", sans-serif;
 }
 
 .font-1-m24 {
   font: 500 1.5rem/0.75 "Montserrat", sans-serif;
 }
 
-.font-1-r {
+.font-1-r24 {
   font: 400 1.5rem/1 "Montserrat", sans-serif;
 }
 
 .font-1-sb24 {
-  font: 600 1.5/1 "Montserrat", sans-serif;
+  font: 600 1.5rem/1 "Montserrat", sans-serif;
 }
 
 .font-1-m28 {
-  font: 500 1.75rem / auto "Montserrat", sans-serif;
+  font: 500 1.75rem / 1 "Montserrat", sans-serif;
 }
 
 .font-1-sb40 {
@@ -40,6 +40,10 @@
 
 .font-1-sb32 {
   font: 600 2rem/1.33 "Montserrat", sans-serif;
+}
+
+.font-1-sb30 {
+  font: 600 1.8rem/1.33 "Montserrat", sans-serif;
 }
 
 .font-1-m16 {
