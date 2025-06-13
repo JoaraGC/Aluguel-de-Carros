@@ -15,6 +15,7 @@
   --cor-c7: #595959;
   --cor-c8: #2e2e2e;
   --cor-m1: #332200;
+  --cor-p: #000000;
 }
 
 .cor-l1 {
@@ -78,4 +79,8 @@
 }
 .cor-m1 {
   color: var(--cor-m1);
+}
+
+.cor-p {
+  color: var(--cor-p);
 }

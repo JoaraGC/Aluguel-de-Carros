@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar</title>
+
+  <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="header1">
+      <a href="./home.html"><img src="../Marca/Marca.svg" alt=""></a>
+      <ul class="lista font-1-m32 cor-a2">
+        <li><a href="./">Carros</a></li>
+        <li><a href="./">Cadastrar</a></li>
+        <li><a href="./">Contato</a></li>
+      </ul>
+    </div>
+
+    <!-- Sub-header -->
+    <div class="sub-header">
+      <label for="">
+        <input class="item1 font-1-sb18" list="locais" name="local" id="local" placeholder="Digite o local de retirada">
+      </label>
+
+      <!-- Cidades e estados que disponíveis -->
+      <datalist id="locais">
+        <option value="Floriano - PI">
+        <option value="São Paulo - SP">
+        <option value="Rio de Janeiro - RJ">
+        <option value="Teresina - PI">
+        <option value="Fortaleza - CE">
+        <option value="Recife - PE">
+      </datalist>
+
+      <label for="">
+        <input class="item2 font-1-sb18" type="date">
+      </label>
+      <label for="">
+        <input class="item2 font-1-sb18" type="time">
+      </label>
+
+      <button class="botao1" type="button" id="botao-buscar">Buscar</button>
+
+      <!-- Botão do Menu e Menu dropdown -->
+      <div class="menu-wrapper">
+        <!-- Botão Menu -->
+        <div class="menu-hamburguer" id="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- Menu dropdown -->
+        <ul id="menu-opcoes" class="menu-escondido font-1-m18">
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Frota</a></li>
+          <li><a href="#">Nova Reserva</a></li>
+          <li><a href="#">Minhas Reservas</a></li>
+          <li><a href="#">Atualizar Dados</a></li>
+          <li><a href="#">Carros Disponíveis</a></li>
+          <li><a href="#">Perguntas Frequentes</a></li>
+          <li><a href="#">Sair</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <section class="cadastro container">
+    <p class="font-1-m40">Olá, vamos preencher seus dados<span class="cor-l1">!</span></p>
+    <p class="font-1-m16">Obrigatório<span class="cor-l1">*</span></p>
+
+    <p class="font-1-sb32">1 - Cadastro</p>
+
+    <form class="campoCadastro">
+      <div class="linha">
+        <div class="campo">
+          <label class="font-1-m16" for="">Nome:<span class="cor-l1">*</span></label>
+          <input type="text" id="nome" name="nome" placeholder="Maria" required>
+          <span id="erroNome" style="color: red;"></span>
+        </div>
+
+        <div class="campo">
+          <label class="font-1-m16" for="">Sobrenome:<span class="cor-l1">*</span></label>
+          <input type="text" id="sobrenome" name="sobrenome" placeholder="Santos" required>
+          <span id="erroSobrenome" style="color: red;"></span>
+        </div>
+
+        <div class="campo">
+          <label class="font-1-m16" for="nacionalidade">Nacionalidade:<span class="cor-l1">*</span></label>
+          <select name="nacionalidade" id="nacionalidade" required>
+            <option value="" disabled>Selecione um país</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Uruguai">Uruguai</option>
+            <option value="Paraguai">Paraguai</option>
+            <option value="Chile">Chile</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Estados Unidos">Estados Unidos</option>
+            <option value="Itália">Itália</option>
+            <option value="Espanha">Espanha</option>
+            <option value="França">França</option>
+            <option value="OUTRO">OUTRO</option>
+          </select>
+        </div> <br>
+      </div>
+
+      <div class="linha">
+        <div class="campo">
+          <label class="font-1-m16" for="cnh">CNH:<span class="cor-l1">*</span></label>
+          <input type="text" id="cnh" name="cnh" maxlength="11" placeholder="12345678901" required>
+          <span id="msgErro" style="color: red;"></span>
+        </div>
+
+        <div class="campo">
+          <label class="font-1-m16" for="tipoDocumento">Tipo de Documento:<span class="cor-l1">*</span></label>
+          <select name="tipoDocumento" id="tipoDocumento" required>
+            <option value="">Selecione</option>
+            <option value="CPF">CPF</option>
+            <option value="RG">RG</option>
+            <option value="Passaporte">Passaporte</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <div id="campoDocumento" style="display: none;">
+            <label class="font-1-m16" for="validarDocumeto" id="labelDocumento"></label><br>
+            <input type="text" id="valorDocumento" name="valorDocumeto" placeholder="" required><br>
+            <span id="documentoErro" style="color: red;"></span>
+          </div>
+        </div><br>
+      </div>
+
+      <div class="linha">
+        <div class="campo">
+          <label class="font-1-m16" for="">Email:<span class="cor-l1">*</span></label>
+          <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+          <span id="erroEmail" style="color: red;"></span>
+        </div>
+
+        <div class="campo">
+          <label class="font-1-m16" for="">Telefone:<span class="cor-l1">*</span></label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+          <span id="erroTelefone" style="color: red;"></span>
+        </div>
+
+        <div class="campo">
+          <label class="font-1-m16" for="">Telefone 2:</label>
+          <input type="tel" id="telefone2" name="telefone2" placeholder="(00) 00000-0000">
+          <span id="erroTelefone2" style="color: red;"></span>
+        </div>
+      </div>
+
+      <!-- Forma de Pagamento -->
+
+      <p class="font-1-sb32">2 - Forma de Pagamento</p>
+
+      <div class="campo">
+        <label class="font-1-m16" for="formaPagamento">Forma de Pagamento:<span class="cor-l1">*</span></label>
+        <select id="formaPagamento" onchange="atualizarFormulario()" required>
+          <option value="">Selecione</option>
+          <option value="credito">Cartão de Crédito</option>
+          <option value="debito">Cartão de Débito</option>
+          <option value="pix">Pix</option>
+        </select>
+      </div><br>
+
+      <div id="dadosCartao" class="hidden2 formaPag distancia">
+        <div class="campo">
+          <label class="font-1-m16" for="nomeTitular">Nome do Titular:<span class="cor-l1">*</span></label>
+          <input type="text" id="nomeTitular" placeholder="Ex: Maria dos Santos" required>
+          <span id="erro-nome" class="erro"></span>
+        </div>
+
+        <div class=" distancia linha">
+          <div class="campo" id="cartao-n">
+            <label class="font-1-m16" for="numeroCartao">Número do Cartão:<span class="cor-l1">*</span></label>
+            <input type="text" id="numeroCartao" maxlength="19" inputmode="numeric" placeholder="1234 5678 8765 4321" min="2025-07" required>
+            <span id="erro-cartao" class="erro"></span>
+          </div>
+
+          <div class="campo">
+            <label class="font-1-m16" for="validade">Data de Validade:<span class="cor-l1">*</span></label>
+            <input type="month" id="validade" required>
+            <span id="erro-validade" class="erro"></span>
+          </div>
+
+          <div class="campo">
+            <label class="font-1-m16" for="cvv">Código de Segurança:(CVV)<span class="cor-l1">*</span></label>
+            <input type="text" maxlength="4" pattern="\d{3,4}" inputmode="numeric" placeholder="123" required>
+            <span id="erro-cvv" class="erro"></span>
+          </div>
+        </div>
+      </div>
+
+      <div id="dadosPix" class="hidden2">
+        <p class="font-1-m16">Escaneie o QR Code abaixo para pagar:</p>
+        <div id="qr-code"></div>
+      </div>
+
+      <div style="text-align: center;">
+        <button type="submit" class="botao1" id="btnCadastrar">CADASTRAR</button>
+      </div>
+
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="container">
+    <div class="line">
+      <div>
+        <a href="./home.html"><img src="../Marca/Marca.svg" alt=""></a>
+      </div>
+      <div>
+        <p class="font-1-m28 cor-4">Contato</p>
+        <a href="+5589988224217">
+          <p class="font-1-m24 cor-c5">+89 98822-4217</p>
+        </a>
+        <a href="mailto:joarajgc@gmail.com">
+          <p class="font-1-m24 cor-c5">joarajgc2@gmail.com</p>
+        </a>
+        <p class="font-1-m24 cor-c5">Rua Logo Ali, 2001 - Perto</p>
+        <p class="font-1-m24 cor-c5">Floriano - PI</p>
+      </div>
+      <div>
+        <p class="font-1-m28 cor-4">Informações</p>
+        <a href="">
+          <p class="font-1-m24 cor-c5">Carros</p>
+        </a>
+        <a href="">
+          <p class="font-1-m24 cor-c5">Login</p>
+        </a>
+        <a href="">
+          <p class="font-1-m24 cor-c5">Contato</p>
+        </a>
+      </div>
+    </div>
+    <div class="especial">
+      <p class="font-1-m24 cor-c5">Créditos de imagens: freepik | unsplash | heroicons</p>
+      <p class="font-1-m24 cor-c5">VeloCar © Alguns Direitos Reservados</p>
+    </div>
+  </footer>
+
+  <script src="../JavaScript/Funções Home/cadastro.js"></script>
+  <script src="../JavaScript/Funções Home/home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+.cadastro p {
+  text-align: start;
+}
+
+.hidden2 {
+  display: none;
+}
+
+.formaPag label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.formaPag input {
+  margin-top: 12px;
+}
+
+.distancia {
+  margin-top: 50px;
+}
+
+#qr-code {
+  width: 200px;
+  height: 200px;
+  background: repeating-linear-gradient(
+    45deg,
+    #000,
+    #000 10px,
+    #fff 10px,
+    #fff 20px
+  );
+}
+
+.campoCadastro {
+  margin-top: -20px;
+}
+
+.campoCadastro input {
+  border: none;
+  background: var(--cor-c1);
+  padding: 16px;
+}
+
+.erro {
+  color: red;
+  font-size: 12px;
+}
+
+.campoCadastro select {
+  padding: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--cor-c1);
+}
